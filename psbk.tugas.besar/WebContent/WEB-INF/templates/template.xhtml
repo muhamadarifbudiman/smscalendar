@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title><ui:insert name="title">Default title</ui:insert></title>
+
+	<h:outputStylesheet name="style.css" library="css"></h:outputStylesheet>
+	<h:outputStylesheet name="bootstrap.css" library="css"></h:outputStylesheet>
+
+
+</h:head>
+
+<h:body>
+
+	<div id="container">
+		<div id="header">
+			<ui:insert name="header">
+				<img src="resources/images/headerFix.png"></img>
+			</ui:insert>
+		</div>
+
+		<div id="header2">
+			<div id="bahasa">
+				<h:panelGrid columns="4">
+					<!--  
+		<h:outputLabel value="Pilih Bahasa : " ></h:outputLabel>
+		<h:outputLabel value="Indonesia"  ></h:outputLabel>
+		<h:outputLabel value="     |      "  ></h:outputLabel>
+		<h:outputLabel value="Inggris" onclick="" ></h:outputLabel>
+		-->
+					<ice:selectOneMenu partialSubmit="true">
+						<f:selectItem itemLabel="Indonesian" itemValue=""></f:selectItem>
+						<f:selectItem itemLabel="English" itemValue=""></f:selectItem>
+					</ice:selectOneMenu>
+				</h:panelGrid>
+			</div>
+		</div>
+
+		<div id="sidebar">
+			<h:form>
+
+				<ace:accordion autoHeight="false">
+					<ace:accordionPane title="Admin">
+						<h:panelGrid columns="1">
+							<ace:linkButton id="lihatprofil" value="Lihat Profil"></ace:linkButton>
+							<ace:linkButton id="ubahprofil" value="Ubah Profil"></ace:linkButton>
+							<ace:linkButton id="bantuan" value="Bantuan"></ace:linkButton>
+							<ace:linkButton id="keluar" value="Keluar"></ace:linkButton>
+						</h:panelGrid>
+					</ace:accordionPane>
+					<ace:accordionPane title="Pesan">
+						<h:panelGrid columns="1">
+							<ace:linkButton id="tulispesanbaru" value="Tulis Pesan Baru"></ace:linkButton>
+							<ace:linkButton id="pesanmasuk" value="Pesan Masuk"></ace:linkButton>
+							<ace:linkButton id="pesanterkirim" value="Pesan Terkirim"></ace:linkButton>
+							<ace:linkButton id="pesanakademik" value="Lihat Pesan Akademik"></ace:linkButton>
+						</h:panelGrid>
+					</ace:accordionPane>
+					<ace:accordionPane title="Akademik">
+						<h:panelGrid columns="1">
+							<ace:linkButton id="jadwalakademik" value="Tulis Jadwal Akademik" />
+							<ace:linkButton id="Kalenderakademik" value="Kalender Akademik" />
+						</h:panelGrid>
+					</ace:accordionPane>
+					<ace:accordionPane title="Dosen">
+						<h:panelGrid columns="1">
+							<ace:linkButton id="dosenbaru" value="Dosen Baru" />
+							<ace:linkButton id="lihatdosen" value="Lihat Dosen" />
+						</h:panelGrid>
+					</ace:accordionPane>
+				</ace:accordion>
+			</h:form>
+
+
+
+
+		</div>
+		
+		<div id="content">
+			<ui:insert name="content">
+
+			</ui:insert>
+		</div>
+		
+	</div>
+	<div id="footer">
+			<ui:insert name="footer">
+			Copyright &copy; 2013 Made.labs Universitas Pasundan  Allright Reserved
+			</ui:insert>
+		</div>
+</h:body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+
+<ui:define name="content">
+ 	<h:form>
+ 	
+ 		<ace:panel header="Input Jadwal Akademik">
+ 			<ice:panelGrid id="inputjadwalakademik" columns="3">
+ 			<h:outputText value="Jadwal Akademik"></h:outputText>
+ 			<h:outputText value=":"></h:outputText>
+ 			<ace:textEntry id="inputahun" value="" required="true"></ace:textEntry>
+ 			<h:outputText value="Nama Tahun"></h:outputText>
+ 			<h:outputText value=":"></h:outputText>
+ 			<ace:textEntry id="namatahun" value="" required="true"></ace:textEntry>
+ 			<h:outputText value="Nama Kegiatan"></h:outputText>
+ 			<h:outputText value=":"></h:outputText>
+ 			<ace:textEntry id="namakegiatan" value="" required="true"></ace:textEntry>
+ 			<h:outputText value="Tanggal"></h:outputText>
+ 			<h:outputText value=":"></h:outputText>
+ 			<ace:textEntry id="tanggal" value="" required="true"></ace:textEntry>
+ 			<h:commandButton value="Simpan"  styleClass="btn btn-primary"></h:commandButton>
+ 				
+ 			</ice:panelGrid>
+ 			
+ 		
+ 		</ace:panel>
+ 	
+ 	</h:form>
+</ui:define>
+
+</ui:composition>
+</html>

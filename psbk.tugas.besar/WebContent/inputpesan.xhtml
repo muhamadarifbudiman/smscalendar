@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+         xmlns:c="http://java.sun.com/jsp/jstl/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+
+<ui:define name="content">
+		<h:form>
+				<ace:panel header="Tulis Pesan Baru">
+					<ice:panelGrid id="combopesanbaru" columns="3">
+						<ice:panelGroup>
+						<ice:outputText value="Subject"></ice:outputText>
+						<ice:outputText value=":"></ice:outputText>
+						<h:selectOneMenu value="" id="subject">
+							<f:selectItem itemValue="email" itemLabel="label"></f:selectItem>	
+						</h:selectOneMenu>
+						</ice:panelGroup>
+	
+					</ice:panelGrid>
+					<ice:panelGrid id="chekbokpesanbaru" columns="4">
+					<h:outputText value="Kepada"></h:outputText>
+					<h:outputText value=":"></h:outputText>
+						<ace:checkboxButton value="">
+						</ace:checkboxButton>
+					<h:outputText value="Semua Dosen" ></h:outputText>
+					<h:outputText value=""></h:outputText>
+					<h:outputText value=""></h:outputText>
+					<ace:checkboxButton value="">
+						</ace:checkboxButton>
+					<h:outputText value="Ketua Jurusan"></h:outputText>
+					<h:outputText value=""></h:outputText>
+					<h:outputText value=""></h:outputText>
+					<ace:checkboxButton value="">
+						</ace:checkboxButton>
+					<h:outputText value="Ketua KK"></h:outputText>
+					<h:outputText value=""></h:outputText>
+					<h:outputText value=""></h:outputText>
+					<ace:checkboxButton value="">
+						</ace:checkboxButton>
+					<h:outputText value="Kordinator Mahasiswa"></h:outputText>
+					</ice:panelGrid>
+					<br />
+					<ice:panelGrid id="textareapesan" columns="3">
+					<h:outputText value="Pesan"></h:outputText>
+					<h:outputText value=":"></h:outputText>
+					<ace:textAreaEntry id="inputpesan" value="" styleclass="textarea"></ace:textAreaEntry>
+					<h:commandButton value="Kirim"  styleClass="btn btn-primary"></h:commandButton>
+					
+					
+					</ice:panelGrid>
+				
+				
+				</ace:panel>
+		
+		</h:form>
+</ui:define>
+
+</ui:composition>
+</html>
