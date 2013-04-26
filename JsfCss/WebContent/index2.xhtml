@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:tr="http://myfaces.apache.org/trinidad"
+	 xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	
+</h:head>
+<h:body>
+
+	<div class="konten">
+		<h:form styleClass="form-horizontal">
+		<h:panelGrid columns="2" styleClass="control-group">
+			<tr:outputLabel value="Username :" styleClass="control-label"></tr:outputLabel>
+			<tr:inputText id="username" ></tr:inputText>
+			<h:message for="user"></h:message>
+			</h:panelGrid>
+			<h:panelGrid columns="2" styleClass="control-group">
+			<tr:outputLabel value="Password :" styleClass="control-label"></tr:outputLabel>
+			<tr:inputText id="password" ></tr:inputText>
+			<h:message for="user"></h:message>
+		</h:panelGrid>
+				<div align="center" >
+				<tr:commandButton  text="Login" styleClass="btn btn-primary button"></tr:commandButton>
+				<tr:commandButton text="Registrasi" styleClass="btn btn-primary" ></tr:commandButton>
+			</div>
+		</h:form>
+	
+	
+	</div>
+	
+</h:body>
+</html>

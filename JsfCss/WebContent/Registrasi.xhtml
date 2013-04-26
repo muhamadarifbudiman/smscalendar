@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:tr="http://myfaces.apache.org/trinidad">
+
+	<h:head>
+		<h:outputStylesheet name="bootstrap.css" library="css"></h:outputStylesheet>
+	</h:head>
+	<h:body>
+		<div class="konten">
+			<tr:form styleClass="form-horizontal">
+		
+			<table>
+					<tr>
+						<td><tr:outputText  value="NRP" ></tr:outputText></td>
+						<td><tr:outputText value=":"></tr:outputText></td>
+						<td><tr:inputText id="nrp" value="" required="true" requiredMessageDetail="NRP harus di isi"></tr:inputText>  </td>
+						<tr:message for="nrp"></tr:message>
+					</tr>
+					<tr>
+						<td><tr:outputText  value="Nama" ></tr:outputText></td>
+						<td><tr:outputText value=":"></tr:outputText></td>
+						<td><tr:inputText id="nama" value="" required="true" requiredMessageDetail="Nama harus di isi"></tr:inputText>  </td>
+						<tr:message for="nama"></tr:message>
+					
+					</tr>
+					<tr>
+					<td><tr:outputText  value="Alamat" ></tr:outputText></td>
+					<td><tr:outputText value=":"></tr:outputText></td>
+					<td><tr:inputText id="alamat" value="" required="true" requiredMessageDetail="Alamat harus di isi"></tr:inputText>  </td>
+					<tr:message for="alamat"></tr:message>
+			
+					</tr>
+					<tr>
+					
+					<td><tr:outputText  value="Jenis kelamin" ></tr:outputText></td>
+					<td><tr:outputText value=":"></tr:outputText></td>
+					<td><tr:selectOneRadio  rendered="true">
+						<tr:selectItem label="Laki-Laki" value="laki-laki"/>
+						<tr:selectItem label="Perempuan" value="perempuan"/>
+						 </tr:selectOneRadio></td>
+					<tr:message for="alamat"></tr:message>
+					</tr>
+					<tr>
+					<td><tr:outputText  value="NO Telepeon" ></tr:outputText></td>
+					<td><tr:outputText value=":"></tr:outputText></td>
+					<td><tr:inputText id="tlp" value="" required="true" requiredMessageDetail="No Telepon  harus di isi"></tr:inputText>  </td>
+					<tr:message for="tlp"></tr:message>
+			
+					</tr>
+			
+			</table>
+			</tr:form>
+		
+		</div>
+	
+	</h:body>
+</html>
